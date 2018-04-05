@@ -1,0 +1,39 @@
+<body>
+  <h1>Adress Book</h1>
+    <div class="input-box">
+      <h4>Add new entry:</h4>
+     <form class="addressForm" name="addressForm" action="">
+       First Name:<br/>
+    <input required type="text" name="firstName" id="f1">
+       <br/>Last Name:<br/>
+    <input type="text" name="lastName" id="f2">
+       <br/>Phone:<br/>
+    <input type="text" name="phone" id="f3">
+       <br/>Email:<br/>
+    <input type="text" name="email" id="f4">
+       <br/>Street Adress:<br/>
+    <input type="text" name="street" id="f5">
+       <br/>City/Town:<br/>
+    <input type="text" name="city" id="f6">
+       <br/>State:<br/>
+    <input type="text" name="state" id="f7">
+       <br/>post code<br/>
+    <input type="text" name="zip" id="f8">
+  <br><input type="button" value ="submit" class="entry" onclick="add(),listView()">
+</form>    
+    </div>
+
+  <div class="retrieve">
+    <h4>Retrieve entry:<h4>
+      <form class="retrieveEntry">
+       First Name:<br/>
+    <input required type="text" name="firstName" id="first">
+       <br/>Last Name:<br/>
+    <input type="text" name="lastName" id="last">
+     <input type="button" value ="search" class="entry" onclick="searchInput()">
+    <div> 
+<div class="output" id="out"><h3>Display</h3>
+ </div>
+
+</body>
+
