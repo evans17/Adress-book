@@ -1,0 +1,78 @@
+var contacts = [];
+var enterField=true;
+
+var add = function(){
+if(enterField){
+	var n1=document.getElementById("f1").value;
+	var n2=document.getElementById("f2").value;
+	var n3=document.getElementById("f3").value;
+   var n4=document.getElementById("f4").value;
+   var n5=document.getElementById("f5").value;
+   var n6=document.getElementById("f6").value;
+   var n7=document.getElementById("f7").value;
+   var n8=document.getElementById("f8").value;
+  var person={
+        firstName: n1,
+        lastName: n2,
+		phone:n3,
+        email: n4,
+		street:n5,
+		city:n6,
+        state: n7,
+		zip:n8
+    }; 
+    contacts.push(person);
+	}
+	restInputField()
+	
+}	
+
+function printPerson(person) {
+    document.getElementById("out").innerHTML +=
+        person.firstName + "- " +
+        person.lastName + "-" +
+        person.phone + "-" +
+		person.email + " -" +
+		person.street + " -" +
+		person.city/town + "- " +
+		person.state + "-" +
+        person.zip + "<br />";
+	    
+}
+
+function listView() {
+    resetView();	
+	var con = contacts.length;
+	for (var i = 0; i < con; i++)
+	 {	
+		printPerson(contacts[i]);	
+	}
+	
+}
+function searchInput() {
+resetView();
+ var firstInput = document.getElementById("first").value;
+ var lastInput = document.getElementById("last").value;
+  //console.log(firstInput);
+for (var i = 0; i < contacts.length; i++)
+	 {	
+		if(firstInput == contacts[i].firstName && lastInput == contacts[i].lastName){
+			printPerson(contacts[i]);	
+		}
+	}	
+}
+
+function resetView() {
+    document.getElementById("out").innerHTML = "";
+}
+function restInputField(){
+ document.getElementById("f1").value="";
+document.getElementById("f2").value="";
+	document.getElementById("f3").value="";
+ document.getElementById("f4").value="";
+  document.getElementById("f5").value="";
+document.getElementById("f6").value="";
+  document.getElementById("f7").value="";
+ document.getElementById("f8").value="";
+	
+}
